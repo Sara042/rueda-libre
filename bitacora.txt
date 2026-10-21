@@ -1,0 +1,15 @@
+BITACORA 
+
+URL:http://127.0.0.1:5500/index.html
+Protocolo:http
+Host:127.0.0.1
+Puerto:5500
+Ruta:/index.html
+Metodo de peticion:GET
+Codigo de estado:304
+Ruta no existente: error 404 Not Found, significa No encontrado, el servidor respondio pero no puede encontrar la pagina solicitada, la pagina no existe.
+
+ROLES 
+HTML:Es la estructura de la pagina
+CSS:Es la presentacion de la pagina, todo lo visual, ej:colores y decoracion
+JavaScript:Es el comportamiento de la pagina, cuando el usuario interactua con esta

@@ -1,0 +1,12 @@
+BITACORA
+URL:http://127.0.0.1:5500/rueda-libre/
+protocolo: http://
+Host:127.0.0.1
+Puerto:5500
+Ruta (path):rueda-libre/
+Method: GET
+Status code:200 Ok
+
+Codigo que registra:404 Not Found
+significado: el servidor pudo comunicarse, pero no encontro el archivo
+o recurso solicitado, la pagina no existe

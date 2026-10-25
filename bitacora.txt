@@ -15,3 +15,33 @@ CSS:Es la presentacion de la pagina, todo lo visual, ej:colores y decoracion
 JavaScript:Es el comportamiento de la pagina, cuando el usuario interactua con esta
 
 Tabla de Rutas
+
+Etiquetas semanticas 
+<header> (Encabezado): Representa un contenedor para contenido introductorio o un conjunto de enlaces de navegación. Típicamente incluye el logotipo, el título principal de la página (<h1>) y el menú principal (<nav>).
+
+<nav> (Navegación): Define una sección de la página cuyo propósito es proporcionar enlaces de navegación (el menú del sitio).
+
+<main> (Contenido Principal): Envuelve el contenido central y único de la página (excluyendo barras laterales globales, menús de navegación fijos y pies de página). Solo debe haber un <main> por página.
+
+<section> (Sección): Agrupa contenido temáticamente relacionado, por lo general acompañado de un encabezado (<h2>, <h3>).
+
+<article> (Artículo): Representa una pieza de contenido independiente, autocontenida y que tiene sentido por sí sola (por ejemplo, cada servicio individual de alquiler o cada producto).
+
+` (Contenido Complementario / Barra lateral): Define contenido que está tangencialmente relacionado con el contenido que lo rodea (como la lista de "qué llevar" o "horarios de atención"). A menudo se presenta en barras laterales o cuadros informativos.
+
+<footer> (Pie de página): Contiene información sobre el autor, derechos de autor, datos de contacto o enlaces relacionados al final de la página.
+
+ESTRUCTURA DE PAGINAS 
+[ HEADER ] -> Menú de navegación (<nav>) + Título / Logo
+[ MAIN ]   -> Contenido principal (Único en la página)
+    ├── <section> -> Bloques temáticos o Tablas
+    ├── <article> -> Servicios independientes (solo en inicio)
+    └── <aside>   -> Contenido complementario (Horarios, qué llevar)
+[ FOOTER ] -> Pie de página (Nombre, correo, año)
+
+ELECCIÓN DE CONTROLES
+Campo de Correo (type="email"): Se seleccionó este tipo en lugar de un texto plano porque el navegador valida automáticamente que el usuario introduzca un formato de correo válido (@ y dominio) antes de permitir el envío.
+
+Tipo de Vehículo (<select>): Se eligió una lista desplegable porque el usuario debe seleccionar una sola opción entre un conjunto cerrado de alternativas predefinidas (Bicicleta urbana o Scooter eléctrico), evitando errores de digitación.
+
+Comentarios (<textarea>): Se prefirió frente a un input de texto de una sola línea (type="text") porque las notas o solicitudes especiales de los clientes pueden requerir múltiples líneas de espacio libre.

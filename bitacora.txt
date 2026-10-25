@@ -45,3 +45,63 @@ Campo de Correo (type="email"): Se seleccionó este tipo en lugar de un texto pl
 Tipo de Vehículo (<select>): Se eligió una lista desplegable porque el usuario debe seleccionar una sola opción entre un conjunto cerrado de alternativas predefinidas (Bicicleta urbana o Scooter eléctrico), evitando errores de digitación.
 
 Comentarios (<textarea>): Se prefirió frente a un input de texto de una sola línea (type="text") porque las notas o solicitudes especiales de los clientes pueden requerir múltiples líneas de espacio libre.
+
+TABLA DE PRUEBAS 8 MIN 
+PRUEBAS DE VALIDACIÓN DEL FORMULARIO DE RESERVAS:
+
+Prueba 1:
+- Campo: Nombre
+- Dato de prueba: An (2 caracteres)
+- Resultado esperado: Bloqueo por no cumplir minlength="3"
+- Resultado obtenido:  Alerta nativa: "Utilice al menos 3 caracteres"
+
+Prueba 2:
+- Campo: Número de documento
+- Dato de prueba: 12345 (5 dígitos)
+- Resultado esperado: Bloqueo por patrón numérico (7-10 dígitos)
+- Resultado obtenido:  Alerta nativa del patrón
+
+Prueba 3:
+- Campo: Número de documento
+- Dato de prueba: ABC12345 (Letras y números)
+- Resultado esperado: Bloqueo por incluir letras
+- Resultado obtenido:  Alerta nativa del patrón
+
+Prueba 4:
+- Campo: Correo electrónico
+- Dato de prueba: sinarroba.com
+- Resultado esperado: Bloqueo por faltar el símbolo @
+- Resultado obtenido:  Alerta nativa de correo
+
+Prueba 5:
+- Campo: Celular de contacto
+- Dato de prueba: 2001234567 (Inicia con 2)
+- Resultado esperado: Bloqueo por patrón (debe iniciar con 3)
+- Resultado obtenido:  Alerta nativa del patrón
+
+Prueba 6:
+- Campo: Celular de contacto
+- Dato de prueba: 300123 (6 dígitos)
+- Resultado esperado: Bloqueo por longitud incompleta
+- Resultado obtenido:  Alerta nativa del patrón
+
+Prueba 7:
+- Campo: Tipo de vehículo
+- Dato de prueba: Ninguna opción seleccionada
+- Resultado esperado: Bloqueo por ser campo obligatorio
+- Resultado obtenido:  Alerta nativa de selección
+
+Prueba 8:
+- Campo: Términos y condiciones
+- Dato de prueba: Casilla desmarcada
+- Resultado esperado: Bloqueo al enviar el formulario
+- Resultado obtenido:  Alerta nativa de término
+
+Etiquetas y atributos de validación que se utilizaron para este punto:
+required: Obliga a que el campo no se quede vacío. Si el usuario intenta enviar el formulario sin llenarlo, el navegador le mostrará un aviso automático.
+
+minlength y maxlength: Establecen el número mínimo y máximo de caracteres permitidos en un campo de texto.
+
+pattern: Es un filtro avanzado basado en expresiones regulares (Regex). Permite definir exactamente qué formato de texto se acepta (por ejemplo, solo números, una cantidad exacta de dígitos, etc.).
+
+title (en los inputs con patrón): Cuando un campo con pattern falla, el navegador muestra este texto como mensaje explicativo para que el usuario sepa qué formato debe ingresar.

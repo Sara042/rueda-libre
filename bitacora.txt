@@ -269,11 +269,6 @@ HALLAZGOS DE LA AUDITORIA
 JERARQUIA DE ENCABEZADO
 
 En algunas secciones se saltaban niveles lógicos o se utilizaban títulos con estilos de texto comunes en lugar de etiquetas estructuradas, lo que desorientaba a los lectores de pantalla.
-Corrección aplicada:
-
-Se garantizó que cada página posee un único y exclusivo <h1> al comienzo del contenido principal (indicando el título principal de la vista).
-
-Se organizaron las secciones utilizando estrictamente etiquetas <h2> para los bloques principales y <h3> para los subelementos o artículos (como los servicios individuales o las tarjetas secundarias), sin saltar ningún nivel en la escala.
 
 CORRECIÓN APLICADA 
 Se garantizó que cada página posee un único y exclusivo <h1> al comienzo del contenido principal (indicando el título principal de la vista).

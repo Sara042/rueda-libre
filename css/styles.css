@@ -5,6 +5,7 @@
 }
 /* Paleta de Colores de Rueda Libre */
 :root {
+    --color-crema2:#F4F1EA;
     --color-crema:#FDFBF7;
     --color-azul-noche: #1E293B;
     --color-verde-ruta: #0D9488;
@@ -23,7 +24,7 @@
 --espacio-lg: 2rem;  /* 32px aprox */
 }
 
-/*ESTILOS BASE Y HERENCIA*/
+/*ESTILOS BASE Y HERENCIA*/ 
 
 body{
     font-family: var(--font-cuerpo);
@@ -50,14 +51,17 @@ main {
 }
 
 .hero-portada {
+    background-color: var(--color-crema2);
     min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: var(--espacio-lg);
 }
 
+/*NAVEGACIÓN Y MENÚ*/
 #menu {
     list-style: none;
     padding: 0;
@@ -73,12 +77,13 @@ main {
     font-weight:600;
     padding:var(--espacio-sm) var(--espacio-md);
     transition: bacground-color 0.3s ease, color 0.3s ease;
+    gap: var(--espacio-lg);
 }
 
 /* Enlace activo de la página actual (Combinando ID + Clase para ganar especificidad limpia) */
 #menu a.activo {
     color:var(--color-verde-ruta);
-    border-bottom: 2px solid var(--color-verde-ruta);
+    border-bottom: 2px solid var(--color-naranja-pedal);
 }
 
 /* Estado al pasar el cursor */
@@ -95,7 +100,7 @@ main {
 }
 
 
-/* Botón de Llamado a la Acción (CTA) */
+/* COMPONENTES (Tarjetas y Botones) */
 .btn-cta {
     display: inline-block;
     background-color: var(--color-verde-ruta);
@@ -116,6 +121,29 @@ main {
 .btn-cta:focus {
     outline: 3px solid var(--color-naranja-pedal);
     outline-offset: 2px;
+}
+
+/* Botón flotante fijo en la esquina inferior derecha */
+.whatsapp-flotante {
+    position:fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000; /* Asegura que siempre esté por encima de todo */
+}
+.whatsapp-flotante a {
+    display:inline-block;
+    background-color:#25D366; 
+    color:#FFFFFF;
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+.whatsapp-flotante a:hover {
+    transform: scale(1.05);/* Sutil efecto de zoom al pasar el mouse */
 }
 
 /* Estilo de foco para campos de formulario */
@@ -148,7 +176,26 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     border-radius: 4px;
 }
 
-/*ESTILOS TABLAS Y TARIFAS*/
+.tarjeta-con-bagde {
+    position: reltive;
+}
+/* Etiqueta flotante en la esquina superior */
+.bagde-nuevo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-naranja-pedal);
+    color: #FFFFFF;
+    font-family: var(--font-titulos);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*TABLAS Y FORMULARIOS*/
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -169,6 +216,7 @@ th {
 }
 
 /*ESTRUCTURA DEL FORMULARIO*/ 
+
 .grupo-formulario {
     margin-top: var(--espacio-md);
 }
@@ -191,4 +239,10 @@ textarea {
     border-radius: 4px;
     background-color: #FFFFFF;
     font-family: var(--font-cuerpo);
+} 
+input:focus, select:focus, textarea:focus,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal) !important;
+    outline-offset: 2px !important;
+    border-color: var(--color-verde-ruta) !important;
 }

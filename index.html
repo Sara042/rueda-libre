@@ -14,15 +14,15 @@
 </head>
 <body>
 
-    <header>
+    <header class="hero-portada">
         <nav> 
             <ul id="menu"> 
                 <li><a href="index.html" class="activo">Inicio</a></li> 
-                <li><a href="paginas/tarifas.html">Tarifas y Rutas</a></li>
+                <li><a href="paginas/tarifas.html">Tarifas y Servicios</a></li>
                 <li><a href="paginas/reservas.html">Reservas</a></li>
             </ul> 
         </nav>
-        <h1>Rueda Libre </h1>
+        <h1>Rueda Libre</h1>
         <img src="img/imgportada.jpg" alt="Imagen de portada" width="700">
     </header>
 
@@ -44,31 +44,43 @@
         <section>
             <h2>Nuestros Servicios:</h2>
 
-                <article> 
+            <div class="contenedor-servicios">
+
+                <article class="tarjeta-servicio"> 
                     <h3>Alquiler de bicicletas</h3>
                     <p>Tenemos bicis para todo tipo de usuario con el mejor estilo,<strong> para los más peques tenemos todo el equipo de protección</strong> <em>Todas nuestras bicis vienen con el casco incluido.</em></p>
                     <img src="img/imgtipos.jpg" alt="Tipos de bicicletas" width="200"><br>
                     <a href="paginas/tarifas.html">Consulta nuestras Tarifas y Planes</a>
                 </article>   
 
-                <article>
+                <article class="tarjeta-servicio tarjeta-con-badge">
+                    <span class="badge-nuevo">Nuevo</span>    
+
+                    <h3> Bicicletas Eléctricas</h3>
+                    <p>Recorre la ciudad sin esfuerzo con nuestra nueva bici asistida de última tecnología.</p>
+                    <img src="img/imgelectrica.jpeg" alt="Bicicleta eléctrica" width="200"><br>
+                </article>
+
+                    <article class="tarjeta-servicio">
                     <h3>Rutas guiadas</h3>
                     <p>Ofrecemos rutas guiadas por los mejores lugares de Medellín, <strong>incluye seguro de accidentes.</strong> Recuerda siempre <em>usar el casco y transitar por las rutas establecidas.</em></p>
                     <img src="img/imgrutas.jpg" alt="Rutas guiadas" width="200"><br>
-                    <a href="paginas/tarifas.html#recorridos">Ver detalles y precios de nuestros Recorridos Guiados</a>
+                    <a href="paginas/tarifas.html#recorridos">Ver detalles y precios de nuestros Recorridos Guiados</a><br>
+                    <a href="paginas/tarifas.html">Ver planes eléctricos</a>
                 </article>   
 
-                <article>
+                <article class="tarjeta-servicio">
                     <h3>Mantenimiento de bicicletas</h3>
                     <p>Ofrecemos servicio de mantenimiento para mantener tu bicicleta en perfecto estado</p>
                     <img src="img/imgmantenimiento.jpg" alt="Mantenimiento de bicicletas" width="200">
                 </article>
 
-                <article>
+                <article class="tarjeta-servicio">
                     <h3>Venta de accesorios</h3>
                     <p>Ofrecemos una amplia selección de accesorios para ciclistas <strong>de alta calidad</strong> y <em>garantía de 1 año.</em></p>
                     <img src="img/imgaccesorios.jpg" alt="Accesorios para ciclistas" width="200">
                 </article>
+            </div>
         </section>  
 
         <section>
@@ -79,20 +91,27 @@
                 <li>Realiza el pago a través de nuestra plataforma segura.</li>
                 <li>Recoge tu bicicleta en nuestra tienda o solicita entrega a domicilio.</li>
             </ol>
-            <p><a href="paginas/reservas.html"><strong>Reserva ahora</strong></a></p>
+            <p><a href="paginas/reservas.html" class="btn-cta">Reserva ahora</a></p>
         </section>
 
         <section id="Encuentranos"> 
             <h2>Encuéntranos</h2>
             <p>Visitanos en nuestra sede central o consulta nuestra ubicacion exacta en el siguiente enlace de mapa:
             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a></p> 
-            <p> ¿Tienes alguna duda? <a href="https://wa.link/d7h5r6" target="_blank">Escríbenos por WhatsApp</a></p>
         </section>
     </main>
+
 
     <footer>
         <p>Rueda Libre - Contacto: <a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a>- 2026</p>
         <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
     </footer>
+
+    <aside class="whatsapp-flotante">
+        <a href="https://wa.link/d7h5r6" target="_blank" rel="noopener noreferrer">
+          WhatsApp 💬 
+        </a>
+    </aside>
+
 </body>
 </html>

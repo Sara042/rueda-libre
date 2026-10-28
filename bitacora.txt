@@ -1,5 +1,5 @@
 
-### **Resumen de Bitácora: Proyecto Web "Rueda Libre"**
+### ** Proyecto Web "Rueda Libre"**
 
 #### **1. Configuración y Estructura Base**
 
@@ -35,6 +35,22 @@
 * **Mini Reto (Especificidad CSS):** Se solucionó el conflicto de la clase `.activo` combinándola con el selector de ID del menú (`#menu a.activo`) para darle mayor peso de cascada frente a las reglas generales.
 
 ---
-### **7. MEDICIÓN DE CAJA ** 
+### **7. Medición De Caja ** 
 Sin utilizar el box-sizing border:box la caja tiende a tener desbordamientos (el padding y el borde se suman por fuera) por el contenido que se le va añadiendo.
 Al utilizar el box-sizing border:box se aplica una regla global, el ancho total de la caja en este caso es de 300px, con esta regla el navegador se encarga de organizar todo el relleno y lo sbordes hacia adentro, sin alterar el tamañano previamente elegido
+
+### ** Resumen final de la semana de miniretos **
+
+Estructura y Semántica (Día 1 y 2): Creación del repositorio en GitHub, estructuración de las tres páginas HTML (index.html, tarifas.html, reservas.html) usando etiquetas semánticas, tablas de datos, listas de definición, formularios completos con validación nativa y accesibilidad auditada.
+
+Diseño y Estilos (Día 3): Implementación de la hoja de estilos global con variables CSS, tipografías de Google Fonts, modelo de caja adaptativo (box-sizing), diseño en tarjetas flexibles para los servicios, alineación de menús y elementos mediante Flexbox.
+
+Interactividad y Despliegue: Configuración de estados de interacción (:hover y :focus), navegación accesible por teclado, posicionamiento avanzado para insignias flotantes y el botón fijo de WhatsApp, finalizando con la publicación de la versión 1.0 en GitHub Pages.
+
+### ** Lo que mejoraria a futuro **
+
+Implementar un menú responsivo para pantallas de dispositivos móviles.
+
+Incorporar un modo oscuro mediante el uso de variables dinámicas.
+
+Conectar el formulario de reservas a un sistema de backend real para el procesamiento de datos.

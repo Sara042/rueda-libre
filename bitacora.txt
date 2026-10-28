@@ -1,308 +1,40 @@
-BITACORA 
 
-URL:http://127.0.0.1:5500/index.html
-Protocolo:http
-Host:127.0.0.1
-Puerto:5500
-Ruta:/index.html
-Metodo de peticion:GET
-Codigo de estado:304
-Ruta no existente: error 404 Not Found, significa No encontrado, el servidor respondio pero no puede encontrar la pagina solicitada, la pagina no existe.
+### **Resumen de Bitácora: Proyecto Web "Rueda Libre"**
 
-ROLES 
-HTML:Es la estructura de la pagina
-CSS:Es la presentacion de la pagina, todo lo visual, ej:colores y decoracion
-JavaScript:Es el comportamiento de la pagina, cuando el usuario interactua con esta
- 
-Tabla de Rutas de Navegación (Versión v0.1)
-Registro de las combinaciones de navegación entre las tres páginas del sitio (index.html, paginas/tarifas.html, paginas/reservas.html):
+#### **1. Configuración y Estructura Base**
 
-Ruta 1:
+* **Entorno:** Local (`[http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html)`) / Producción (`[https://sara042.github.io/rueda-libre/](https://sara042.github.io/rueda-libre/)`). Códigos HTTP clave: `200` (OK) y `304` (Sin cambios), con control de errores `404`.
+* **Roles de Desarrollo:** HTML (estructura), CSS (presentación visual) y JavaScript (comportamiento interactivo).
+* **Semántica HTML:** Uso estricto de regiones (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`) y jerarquía lógica de encabezados (`<h1>` único por página, `<h2>`, `<h3>`).
 
-Página de Origen: index.html
+#### **2. Navegación y Rutas**
 
-Enlace de Destino: Inicio
+* **Páginas del sitio:** `index.html`, `paginas/tarifas.html`, `paginas/reservas.html`.
+* **Rutas relativas:** Correctamente enlazadas desde la raíz (`paginas/...`) y desde subcarpetas (`../index.html`).
 
-Ruta Escrita en el Código: index.html
+#### **3. Formulario y Validación**
 
-Ruta 2:
+* **Controles:** `type="email"` (validación nativa de formato), `<select>` (selección única de vehículos), `<textarea>` (comentarios multilínea).
+* **Pruebas de Validación (8 Min):** Todas superadas exitosamente mediante bloqueos nativos ante errores de longitud mínima (`minlength`), patrones numéricos/celular, campos obligatorios, términos y condiciones y correos sin `@`.
 
-Página de Origen: index.html
+#### **4. Accesibilidad (A11Y)**
 
-Enlace de Destino: Tarifas y rutas
+* Textos alternativos (`alt`) auditados (informativos y decorativos vacíos).
+* Enlaces descriptivos corregidos (eliminación de textos genéricos como "haz clic aquí").
+* Idioma establecido (`lang="es"`) y navegación completa por teclado probada.
 
-Ruta Escrita en el Código: paginas/tarifas.html
+#### **5. Diseño y Color (UI/UX)**
 
-Ruta 3:
+* **Fondo general:** Crema (`#FDFBF7`).
+* **Textos:** Azul Noche (`#1E293B`) para cuerpo y Gris Asfalto (`#475569`) para subtítulos.
+* **Destacados:** Verde Ruta (`#0D9488`) para botones y enlaces; Naranja Pedal exclusivamente para elementos gráficos/decorativos. Contraste validado para accesibilidad.
 
-Página de Origen: index.html
+#### **6. CSS y Herencia**
 
-Enlace de Destino: Reservas
+* **Herencia:** Propiedades como tipografía (`font-family`) se heredan automáticamente; los márgenes (`margin`) no.
+* **Mini Reto (Especificidad CSS):** Se solucionó el conflicto de la clase `.activo` combinándola con el selector de ID del menú (`#menu a.activo`) para darle mayor peso de cascada frente a las reglas generales.
 
-Ruta Escrita en el Código: paginas/reservas.html
-
-Ruta 4:
-
-Página de Origen: paginas/tarifas.html
-
-Enlace de Destino: Inicio
-
-Ruta Escrita en el Código: ../index.html
-
-Ruta 5:
-
-Página de Origen: paginas/tarifas.html
-
-Enlace de Destino: Tarifas y rutas
-
-Ruta Escrita en el Código: tarifas.html
-
-Ruta 6:
-
-Página de Origen: paginas/tarifas.html
-
-Enlace de Destino: Reservas
-
-Ruta Escrita en el Código: reservas.html
-
-Ruta 7:
-
-Página de Origen: paginas/reservas.html
-
-Enlace de Destino: Inicio
-
-Ruta Escrita en el Código: ../index.html
-
-Ruta 8:
-
-Página de Origen: paginas/reservas.html
-
-Enlace de Destino: Tarifas y rutas
-
-Ruta Escrita en el Código: tarifas.html
-
-Ruta 9:
-
-Página de Origen: paginas/reservas.html
-
-Enlace de Destino: Reservas
-
-Ruta Escrita en el Código: reservas.html
-
-
-Esquema de Regiones Semánticas
-Esquema estructural implementado en todas las páginas para separar las áreas de contenido:
-
-<header>: Contiene la barra de navegación principal (<nav>), el logotipo/imagen representativa y el título principal (<h1>).
-
-<nav> (Navegación): Define una sección de la página cuyo propósito es proporcionar enlaces de navegación (el menú del sitio).
-
-<main>: Contenedor único y central de la página que alberga toda la información relevante.
-
-<section>: Bloques temáticos principales y tablas informativas.
-
-<article>: Elementos independientes con sentido propio (utilizados en las tarjetas de servicios de la página de inicio).
-
-<aside>: Contenido complementario o lateral (listas de qué llevar, notas importantes y horarios de atención).
-
-<footer> (Pie de página): Contiene información sobre el autor, derechos de autor, datos de contacto o enlaces relacionados al final de la página.
-
-ESTRUCTURA DE PAGINAS 
-[ HEADER ] -> Menú de navegación (<nav>) + Título / Logo
-[ MAIN ]   -> Contenido principal (Único en la página)
-    ├── <section> -> Bloques temáticos o Tablas
-    ├── <article> -> Servicios independientes (solo en inicio)
-    └── <aside>   -> Contenido complementario (Horarios, qué llevar)
-[ FOOTER ] -> Pie de página (Nombre, correo, año)
-
-JUSTIFICACIÓN DE ELECCIÓN DE CONTROLES EN EL FORMULARIO 
-
-Campo de Correo (type="email"): Se seleccionó para obligar al navegador a verificar nativamente que el texto ingresado contenga una estructura válida de correo electrónico (@ y dominio).
-
-Tipo de Vehículo (<select>): Se eligió una lista desplegable porque el usuario debe seleccionar una única opción entre un conjunto cerrado de alternativas predefinidas, evitando errores de digitación.
-
-Comentarios (<textarea>): Se prefirió frente a un input de texto de una sola línea porque las notas, dudas o solicitudes especiales de los clientes pueden requerir múltiples líneas de espacio libre.
-
-----------------------------------------------------------
-TABLA DE PRUEBAS 8 MIN 
-PRUEBAS DE VALIDACIÓN DEL FORMULARIO DE RESERVAS:
-----------------------------------------------------------
-
-Prueba 1:
-- Campo: Nombre
-- Dato de prueba: An (2 caracteres)
-- Resultado esperado: Bloqueo por no cumplir minlength="3"
-- Resultado obtenido:  Alerta nativa: "Utilice al menos 3 caracteres"
-
-Prueba 2:
-- Campo: Número de documento
-- Dato de prueba: 12345 (5 dígitos)
-- Resultado esperado: Bloqueo por patrón numérico (7-10 dígitos)
-- Resultado obtenido:  Alerta nativa del patrón
-
-Prueba 3:
-- Campo: Número de documento
-- Dato de prueba: ABC12345 (Letras y números)
-- Resultado esperado: Bloqueo por incluir letras
-- Resultado obtenido:  Alerta nativa del patrón
-
-Prueba 4:
-- Campo: Correo electrónico
-- Dato de prueba: sinarroba.com
-- Resultado esperado: Bloqueo por faltar el símbolo @
-- Resultado obtenido:  Alerta nativa de correo
-
-Prueba 5:
-- Campo: Celular de contacto
-- Dato de prueba: 2001234567 (Inicia con 2)
-- Resultado esperado: Bloqueo por patrón (debe iniciar con 3)
-- Resultado obtenido:  Alerta nativa del patrón
-
-Prueba 6:
-- Campo: Celular de contacto
-- Dato de prueba: 300123 (6 dígitos)
-- Resultado esperado: Bloqueo por longitud incompleta
-- Resultado obtenido:  Alerta nativa del patrón
-
-Prueba 7:
-- Campo: Tipo de vehículo
-- Dato de prueba: Ninguna opción seleccionada
-- Resultado esperado: Bloqueo por ser campo obligatorio
-- Resultado obtenido:  Alerta nativa de selección
-
-Prueba 8:
-- Campo: Términos y condiciones
-- Dato de prueba: Casilla desmarcada
-- Resultado esperado: Bloqueo al enviar el formulario
-- Resultado obtenido:  Alerta nativa de término
-
-----------------------------------------
-AUDITORIA DE ACCESIBILIDAD (A11Y)
-----------------------------------------
-
-Textos alternativos (alt): Se verificó que todas las imágenes informativas posean descripciones claras (ej. alt="Fotografía de portada con ciclistas...") y que las decorativas utilicen un atributo alt="" vacío para lectores de pantalla.
-
-Jerarquía de encabezados: Se respetó estrictamente una escala lógica sin saltar niveles (un único <h1> por página, seguido de <h2> para secciones y ### para artículos o subtemas).
-
-Textos de enlaces descriptivos: Se eliminaron los textos genéricos "haz clic aquí". Todos los enlaces explican claramente su destino (ej. "Ir al formulario de reservas para asegurar tu bicicleta").
-
-Idioma del documento: Se estableció <html lang="es"> en todas las páginas.
-
-Navegación por teclado: Se comprobó que el flujo con la tecla Tab, Shift + Tab, flechas de selección, barra espaciadora y Enter funcione de manera lógica y secuencial.
-
-
-----------------------------------------------------
-EVALUACION DE CONTRASTE Y MAPA DE USO DE COLOR 
-------------------------------------------------------
-
-Combinación 1:
-
-Colores: Texto blanco sobre Verde Ruta
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Botones principales y llamadas a la acción.
-
-Combinación 2:
-
-Colores: Texto blanco sobre Naranja Pedal
-
-Clasificación: Apta solo para texto grande
-
-Uso asignado: Títulos destacados o elementos gráficos grandes.
-
-Combinación 3:
-
-Colores: Azul Noche sobre Naranja Pedal
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Enlaces o acentos destacados sobre fondos cálidos.
-
-Combinación 4:
-
-Colores: Azul Noche sobre Crema
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Color principal para todo el cuerpo de texto general.
-
-Combinación 5:
-
-Colores: Gris Asfalto sobre Crema
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Subtítulos y textos descriptivos secundarios.
-
-Combinación 6:
-
-Colores: Verde Ruta sobre Crema
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Enlaces dentro del contenido general.
-
-Combinación 7:
-
-Colores: Naranja Pedal sobre Crema
-
-Clasificación: No apta para texto
-
-Uso asignado: Exclusivamente para elementos gráficos decorativos o bordes (no textos).
-
-Combinación 8:
-
-Colores: Texto blanco sobre Azul Noche
-
-Clasificación: Apta para texto normal y grande
-
-Uso asignado: Cabeceras, barra de navegación y pie de página.
-
-Fondo general (background-color): Crema (#FDFBF7) para garantizar una lectura suave y cómoda.
-
-Texto principal: Azul Noche (#1E293B) sobre fondos claros.
-
-Textos secundarios y descripciones: Gris Asfalto (#475569).
-
-Botones y destacados principales: Verde Ruta (#0D9488) con texto blanco.
-
-Enlaces: Azul Noche (#1E293B) con subrayado o Verde Ruta (#0D9488) al pasar el cursor.
-
-
-----------------------------------------
-HALLAZGOS DE LA AUDITORIA 
-----------------------------------------
-
-----------------------------------------
-JERARQUIA DE ENCABEZADO
-----------------------------------------
-
-En algunas secciones se saltaban niveles lógicos o se utilizaban títulos con estilos de texto comunes en lugar de etiquetas estructuradas, lo que desorientaba a los lectores de pantalla.
-
-CORRECIÓN APLICADA 
-Se garantizó que cada página posee un único y exclusivo <h1> al comienzo del contenido principal (indicando el título principal de la vista).
-
-Se organizaron las secciones utilizando estrictamente etiquetas <h2> para los bloques principales y <h3> para los subelementos o artículos (como los servicios individuales o las tarjetas secundarias), sin saltar ningún nivel en la escala.
-
-TEXTOS DE ENLACE DESCRIPTIVOS
-Se encontraron enlaces genéricos como "da clic aquí", "toca aquí" o "más información", los cuales carecen de significado fuera de su contexto visual para personas que utilizan tecnologías de asistencia (lectores de pantalla)
-
-CORRECIÓN APLICADA 
-Se reescribieron todos los textos de los enlaces para que sean completamente autoexplicativos y claros por sí mismos.
-
--------------------------------------------
-RUTA DE MI PAGINA WEB
-https://sara042.github.io/rueda-libre/
--------------------------------------------
-
-PROPIEDADES QUE HEREDA UN PARRAFO
---font-family el parrafo lo adopta automáticamente la tipografía
-PROPIEDADES QUE NO SE HEREDAN 
-margin, los margenes son rellenos del body no se transfieren al párrafo
-
-MINI RETO 10 CSS
-El problema: Al principio, el navegador no aplicaba los estilos especiales de la clase "activo" porque las reglas generales del menú tenían más "peso" y la terminaban ignorando.
-Por qué pasaba: En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene mayor prioridad de selectores (los ID pesan más que las clases sueltas).
-La solución: se combino el identificador del menú con la clase (#menu a.activo) y asi se le dio el peso para que el navegador reconociera y pintara correctamente el enlace activo en cada página.
-
+---
+### **7. MEDICIÓN DE CAJA ** 
+Sin utilizar el box-sizing border:box la caja tiende a tener desbordamientos (el padding y el borde se suman por fuera) por el contenido que se le va añadiendo.
+Al utilizar el box-sizing border:box se aplica una regla global, el ancho total de la caja en este caso es de 300px, con esta regla el navegador se encarga de organizar todo el relleno y lo sbordes hacia adentro, sin alterar el tamañano previamente elegido

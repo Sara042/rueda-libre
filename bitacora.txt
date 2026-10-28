@@ -1,6 +1,8 @@
 
-### ** Proyecto Web "Rueda Libre"**
+Este proyecto fue hecho con ayuda de la IA Gemini, la utilicé para que me explicara cada minireto y asi poder entender como funciona y cuando se utiliza cada etiqueta, clase, etc...
 
+
+### ** Proyecto Web "Rueda Libre"**
 #### **1. Configuración y Estructura Base**
 
 * **Entorno:** Local (`[http://127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html)`) / Producción (`[https://sara042.github.io/rueda-libre/](https://sara042.github.io/rueda-libre/)`). Códigos HTTP clave: `200` (OK) y `304` (Sin cambios), con control de errores `404`.
@@ -54,3 +56,12 @@ Implementar un menú responsivo para pantallas de dispositivos móviles.
 Incorporar un modo oscuro mediante el uso de variables dinámicas.
 
 Conectar el formulario de reservas a un sistema de backend real para el procesamiento de datos.
+
+colores de la actualizacion de la pagina 
+  --bg-principal: #1D1A39;     /* Azul Noche - Fondo de la pantalla */
+  --bg-tarjetas: #451455;      /* Púrpura Ahumado - Bloques y menús */
+  --text-principal: #FFFFFF;   /* Blanco - Títulos impactantes */
+  --text-secundario: #E2E2EC;  /* Gris claro - Lectura cómoda de párrafos */
+  --cta-primario: #00F3FF;     /* Cian Eléctrico - Botones principales */
+  --cta-secundario: #FF007F;   /* Magenta Neón - Ofertas, íconos y detalles */
+

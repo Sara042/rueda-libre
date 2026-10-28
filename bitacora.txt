@@ -305,3 +305,4 @@ MINI RETO 10 CSS
 El problema: Al principio, el navegador no aplicaba los estilos especiales de la clase "activo" porque las reglas generales del menú tenían más "peso" y la terminaban ignorando.
 Por qué pasaba: En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene mayor prioridad de selectores (los ID pesan más que las clases sueltas).
 La solución: se combino el identificador del menú con la clase (#menu a.activo) y asi se le dio el peso para que el navegador reconociera y pintara correctamente el enlace activo en cada página.
+

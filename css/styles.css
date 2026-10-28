@@ -1,5 +1,8 @@
 /*VARIABLES GLOBALES*/
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 /* Paleta de Colores de Rueda Libre */
 :root {
     --color-crema:#FDFBF7;
@@ -39,6 +42,29 @@ h1, h2, h3, h4, h5 , h6 {
     margin-top: 0;
 }
 
+main {
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.hero-portada {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justifity-content: center;
+    align-items: center;
+    text-aling: center;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    gap: var(--espacio-md);
+}
 /* Estilo base para los enlaces del menú */
 #menu a {
     color: var(--color-azul-noche);
@@ -98,4 +124,71 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 3px solid var(--color-naranja-pedal) !important; /* Quitamos el borde por defecto del navegador */
     outline-offset: 2px !important;
     border-color: var(--color-verde-ruta) !important;
+}
+
+.contenedor-servicios {
+    display: flex;
+    gap: var(--espacio-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta-servicio {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 8px;
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+    flex: 1;
+    min-width: 280px;
+}
+
+.tarjeta-servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/*ESTILOS TABLAS Y TARIFAS*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+}
+
+th, td {
+    padding: var(--espacio-sm) var(--espacio-md);
+    text-align: left;
+    border-bottom: 1px solid var(--color-gris-asfalto);
+}
+
+th {
+    background-color: var(--color-azul-noche);
+    color: #FFFFFF;
+    font-family: var(--font-titulos);
+}
+
+/*ESTRUCTURA DEL FORMULARIO*/ 
+.grupo-formulario {
+    margin-top: var(--espacio-md);
+}
+
+label {
+    display:block;
+    font-weight: 600;
+    margin-bottom: var(--espacio-sm);
+    color: var(--color-azul-noche);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--espacio-sm);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font-family: var(--font-cuerpo);
 }

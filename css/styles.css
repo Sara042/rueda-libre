@@ -38,3 +38,64 @@ h1, h2, h3, h4, h5 , h6 {
     color: var(--color-azul-noche);
     margin-top: 0;
 }
+
+/* Estilo base para los enlaces del menú */
+#menu a {
+    color: var(--color-azul-noche);
+    text-decoration: none;
+    font-family:var(--font-titulos);
+    font-weight:600;
+    padding:var(--espacio-sm) var(--espacio-md);
+    transition: bacground-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enlace activo de la página actual (Combinando ID + Clase para ganar especificidad limpia) */
+#menu a.activo {
+    color:var(--color-verde-ruta);
+    border-bottom: 2px solid var(--color-verde-ruta);
+}
+
+/* Estado al pasar el cursor */
+#menu a:hover {
+    color:var(--color-verde-ruta);
+}
+
+/* Estado al navegar con el teclado */
+#menu a:focus, 
+#menu a:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal) !important;
+    outline-offset: 3px !important;
+    background-color: var(--color-crema);
+}
+
+
+/* Botón de Llamado a la Acción (CTA) */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-verde-ruta);
+    color: #FFFFFF; 
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    padding: var(--espacio-sm) var(--espacio-lg);
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2 ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-azul-noche); /* Cambia a Azul Noche al pasar el mouse */
+}
+
+.btn-cta:focus {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 2px;
+}
+
+/* Estilo de foco para campos de formulario */
+input:focus, select:focus, textarea:focus,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal) !important; /* Quitamos el borde por defecto del navegador */
+    outline-offset: 2px !important;
+    border-color: var(--color-verde-ruta) !important;
+}

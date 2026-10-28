@@ -123,9 +123,10 @@ Tipo de Vehículo (<select>): Se eligió una lista desplegable porque el usuario
 
 Comentarios (<textarea>): Se prefirió frente a un input de texto de una sola línea porque las notas, dudas o solicitudes especiales de los clientes pueden requerir múltiples líneas de espacio libre.
 
-
+----------------------------------------------------------
 TABLA DE PRUEBAS 8 MIN 
 PRUEBAS DE VALIDACIÓN DEL FORMULARIO DE RESERVAS:
+----------------------------------------------------------
 
 Prueba 1:
 - Campo: Nombre
@@ -175,7 +176,9 @@ Prueba 8:
 - Resultado esperado: Bloqueo al enviar el formulario
 - Resultado obtenido:  Alerta nativa de término
 
+----------------------------------------
 AUDITORIA DE ACCESIBILIDAD (A11Y)
+----------------------------------------
 
 Textos alternativos (alt): Se verificó que todas las imágenes informativas posean descripciones claras (ej. alt="Fotografía de portada con ciclistas...") y que las decorativas utilicen un atributo alt="" vacío para lectores de pantalla.
 
@@ -187,8 +190,10 @@ Idioma del documento: Se estableció <html lang="es"> en todas las páginas.
 
 Navegación por teclado: Se comprobó que el flujo con la tecla Tab, Shift + Tab, flechas de selección, barra espaciadora y Enter funcione de manera lógica y secuencial.
 
- 
+
+----------------------------------------------------
 EVALUACION DE CONTRASTE Y MAPA DE USO DE COLOR 
+------------------------------------------------------
 
 Combinación 1:
 
@@ -264,9 +269,14 @@ Botones y destacados principales: Verde Ruta (#0D9488) con texto blanco.
 
 Enlaces: Azul Noche (#1E293B) con subrayado o Verde Ruta (#0D9488) al pasar el cursor.
 
-HALLAZGOS DE LA AUDITORIA 
 
+----------------------------------------
+HALLAZGOS DE LA AUDITORIA 
+----------------------------------------
+
+----------------------------------------
 JERARQUIA DE ENCABEZADO
+----------------------------------------
 
 En algunas secciones se saltaban niveles lógicos o se utilizaban títulos con estilos de texto comunes en lugar de etiquetas estructuradas, lo que desorientaba a los lectores de pantalla.
 
@@ -281,5 +291,12 @@ Se encontraron enlaces genéricos como "da clic aquí", "toca aquí" o "más inf
 CORRECIÓN APLICADA 
 Se reescribieron todos los textos de los enlaces para que sean completamente autoexplicativos y claros por sí mismos.
 
+-------------------------------------------
 RUTA DE MI PAGINA WEB
 https://sara042.github.io/rueda-libre/
+-------------------------------------------
+
+PROPIEDADES QUE HEREDA UN PARRAFO
+--font-family el parrafo lo adopta automáticamente la tipografía
+PROPIEDADES QUE NO SE HEREDAN 
+margin, los margenes son rellenos del body no se transfieren al párrafo

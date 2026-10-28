@@ -1,0 +1,40 @@
+/*VARIABLES GLOBALES*/
+
+/* Paleta de Colores de Rueda Libre */
+:root {
+    --color-crema:#FDFBF7;
+    --color-azul-noche: #1E293B;
+    --color-verde-ruta: #0D9488;
+    --color-naranja-pedal: #F97316;
+    --color-gris-asfalto: #475569;
+
+/* Familias Tipográficas con fuentes de respaldo */
+
+--font-titulos: 'Montserrat', sans-serif;
+--font-cuerpo: 'Open Sans', sans-serif;
+
+/* Escala de Espaciado en rem:hace que tu sitio sea accesible y se adapte si el usuario cambia el tamaño de letra en su navegador. */
+
+--espacio-sm: 0.5rem;  /* 8px aprox */
+--espacio-md: 1rem;   /* 16px aprox */
+--espacio-lg: 2rem;  /* 32px aprox */
+}
+
+/*ESTILOS BASE Y HERENCIA*/
+
+body{
+    font-family: var(--font-cuerpo);
+    color: var(--color-azul-noche);
+    background-color: var(--color-crema);
+    margin: 0;
+    padding: var(--espacio-md);
+    line-height: 1.6;
+}
+
+/* Selector agrupado para todos los encabezados */
+
+h1, h2, h3, h4, h5 , h6 {
+    font-family: var(--font-titulos);
+    color: var(--color-azul-noche);
+    margin-top: 0;
+}

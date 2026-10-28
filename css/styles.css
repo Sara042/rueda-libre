@@ -53,9 +53,9 @@ main {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justifity-content: center;
+    justify-content: center;
     align-items: center;
-    text-aling: center;
+    text-align: center;
 }
 
 #menu {

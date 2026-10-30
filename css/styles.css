@@ -1,16 +1,20 @@
-/*VARIABLES GLOBALES*/
+/* ==========================================
+   1. CONFIGURACIÓN GLOBAL Y RESET
+   ========================================== */
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
-/* Paleta de Colores de Rueda Libre */
+/* ==========================================
+   2. VARIABLES GLOBALES (Design Tokens)
+   ========================================== */
 :root {
     --color-crema2:#F4F1EA;
     --color-crema: #FDFBF7;
-  --color-azul-noche: #1E293B;
-  --color-verde-ruta: #0D9488;
-  --color-naranja-pedal: #F97316;
-  --color-gris-asfalto: #475569;
+    --color-azul-noche: #1E293B;
+    --color-verde-ruta: #0D9488;
+    --color-naranja-pedal: #F97316;
+    --color-gris-asfalto: #475569;
 
 /* Familias Tipográficas con fuentes de respaldo */
 
@@ -24,8 +28,9 @@
 --espacio-lg: 2rem;  /* 32px aprox */
 }
 
-/*ESTILOS BASE Y HERENCIA*/ 
-
+/* ==========================================
+   3. ESTILOS BASE Y HERENCIA
+   ========================================== */
 body{
     font-family: var(--font-cuerpo);
     color: var(--color-azul-noche);
@@ -62,7 +67,9 @@ main {
     gap: var(--espacio-md);
 }
 
-/*NAVEGACIÓN Y MENÚ*/
+/* ==========================================
+   4. NAVEGACIÓN Y MENÚ
+   ========================================== */
 #menu {
     list-style: none;
     padding: 0;
@@ -78,8 +85,7 @@ main {
     font-family:var(--font-titulos);
     font-weight:600;
     padding:var(--espacio-sm) var(--espacio-md);
-    transition: bacground-color 0.3s ease, color 0.3s ease;
-    gap: var(--espacio-lg);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Enlace activo de la página actual (Combinando ID + Clase para ganar especificidad limpia) */
@@ -102,7 +108,9 @@ main {
 }
 
 
-/* COMPONENTES (Tarjetas y Botones) */
+/* ==========================================
+   5. COMPONENTES (Tarjetas, Botones y Badges)
+   ========================================== */
 .btn-cta {
     display: inline-block;
     background-color: var(--color-verde-ruta);
@@ -178,12 +186,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     border-radius: 4px;
 }
 
-.tarjeta-con-bagde {
+.tarjeta-con-badge {
     position: reltive;
 }
 /* Etiqueta flotante en la esquina superior */
-.bagde-nuevo {
-    position: absolute;
+.badge-nuevo {
+    position:static;
     top: 1rem;
     right: 1rem;
     background-color: var(--color-naranja-pedal);
@@ -196,7 +204,39 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/*TABLAS Y FORMULARIOS*/
+.cuadricula-flota {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+
+.tarjeta-modelo {
+    background-color: var(#FFFFFF);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 8px;
+    padding: var(--espacio-md);
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta-modelo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--espacio-sm);
+}
+.tarjeta-modelo .precio {
+    font-weight: 700;
+    color:var(--color-verde-ruta);
+    margin-bottom: var(--espacio-sm);
+}
+.tarjeta-modelo .btn.cta {
+    margin-top: auto;
+    text-align: center;
+}
+/* ==========================================
+   6. TABLAS, FORMULARIOS Y PIE DE PÁGINA
+   ========================================== */
 
 table {
     width: 100%;
@@ -216,8 +256,6 @@ th {
     color: #FFFFFF;
     font-family: var(--font-titulos);
 }
-
-/*ESTRUCTURA DEL FORMULARIO*/ 
 
 .grupo-formulario {
     margin-top: var(--espacio-md);
@@ -242,6 +280,7 @@ textarea {
     background-color: #FFFFFF;
     font-family: var(--font-cuerpo);
 } 
+
 input:focus, select:focus, textarea:focus,
 input:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 3px solid var(--color-naranja-pedal) !important;

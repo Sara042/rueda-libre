@@ -70,3 +70,12 @@ colores de la actualizacion de la pagina
 ### ** Enacabezado con flexbox **
 El comportamiento de la página al estrecharla poco a poco se ve bien, todo se acomoda para que la visualización sea mas cómoda para el usuario.
 se utilizaron las etiquetas: flex-wrap, justify-contet: space between.
+
+### ** Cuadrícula Grid **
+Se hacen las pruebas de cuadricula de flota 
+
+A 1280 px se visualizan 4 columnas.
+
+A 900 px se visualizan 3 columnas.
+
+A 500 px se visualiza 1 sola columna.

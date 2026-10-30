@@ -57,16 +57,21 @@ main {
 
 .hero-portada {
     background-color: var(--color-crema2);
-    min-height: 30vh; /*Se redujo un poco para que quede como barra */
-    display: flex;
-    flex-direction: row; /*Para lococar los elementos en fila*/
-    justify-content: space-between; /*Manda uno a cada extremo*/
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: var(--espacio-md) var(--espacio-lg);
-    text-align: center;
-    gap: var(--espacio-md);
+    padding: var(--espacio-lg);
+    gap: var(--espacio-md)
 }
-
+.hero-contenido {
+    text-align: left;
+}
+.hero-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 /* ==========================================
    4. NAVEGACIÓN Y MENÚ
    ========================================== */
@@ -156,14 +161,6 @@ main {
     transform: scale(1.05);/* Sutil efecto de zoom al pasar el mouse */
 }
 
-/* Estilo de foco para campos de formulario */
-input:focus, select:focus, textarea:focus,
-input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 3px solid var(--color-naranja-pedal) !important; /* Quitamos el borde por defecto del navegador */
-    outline-offset: 2px !important;
-    border-color: var(--color-verde-ruta) !important;
-}
-
 .contenedor-servicios {
     display: flex;
     gap: var(--espacio-md);
@@ -233,6 +230,25 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .tarjeta-modelo .btn.cta {
     margin-top: auto;
     text-align: center;
+}
+
+.galeria-rutas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-md);
+}
+.tarjeta-ruta {
+    background-color: #FFFFFF;
+    border-radius: dolid var(--color-gris-asfalto);
+    border-radius: 8px;
+    padding: var(--espacio-md0);
+}
+.tarjeta-ruta img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--espacio-sm);
 }
 /* ==========================================
    6. TABLAS, FORMULARIOS Y PIE DE PÁGINA

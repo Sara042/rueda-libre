@@ -263,7 +263,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 
 .site-footer a {
-    color: var(--color-verde-ruta);
+    color: var(--color-crema);
     text-decoration: none;
 }
 

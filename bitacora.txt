@@ -65,3 +65,8 @@ colores de la actualizacion de la pagina
   --cta-primario: #00F3FF;     /* Cian Eléctrico - Botones principales */
   --cta-secundario: #FF007F;   /* Magenta Neón - Ofertas, íconos y detalles */
 
+### ** SEMANA 2, DIA 1 **
+
+### ** Enacabezado con flexbox **
+El comportamiento de la página al estrecharla poco a poco se ve bien, todo se acomoda para que la visualización sea mas cómoda para el usuario.
+se utilizaron las etiquetas: flex-wrap, justify-contet: space between.

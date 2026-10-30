@@ -6,11 +6,11 @@
 /* Paleta de Colores de Rueda Libre */
 :root {
     --color-crema2:#F4F1EA;
-    --color-crema:#FDFBF7;
-    --color-azul-noche: #1E293B;
-    --color-verde-ruta: #0D9488;
-    --color-naranja-pedal: #F97316;
-    --color-gris-asfalto: #475569;
+    --color-crema: #FDFBF7;
+  --color-azul-noche: #1E293B;
+  --color-verde-ruta: #0D9488;
+  --color-naranja-pedal: #F97316;
+  --color-gris-asfalto: #475569;
 
 /* Familias Tipográficas con fuentes de respaldo */
 
@@ -52,13 +52,14 @@ main {
 
 .hero-portada {
     background-color: var(--color-crema2);
-    min-height: 70vh;
+    min-height: 30vh; /*Se redujo un poco para que quede como barra */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /*Para lococar los elementos en fila*/
+    justify-content: space-between; /*Manda uno a cada extremo*/
     align-items: center;
+    padding: var(--espacio-md) var(--espacio-lg);
     text-align: center;
-    gap: var(--espacio-lg);
+    gap: var(--espacio-md);
 }
 
 /*NAVEGACIÓN Y MENÚ*/
@@ -68,6 +69,7 @@ main {
     margin: 0;
     display:flex;
     gap: var(--espacio-md);
+    flex-wrap: wrap; /*para que los enlaces pasen a otra linea si no caben*/
 }
 /* Estilo base para los enlaces del menú */
 #menu a {
@@ -245,4 +247,26 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 3px solid var(--color-naranja-pedal) !important;
     outline-offset: 2px !important;
     border-color: var(--color-verde-ruta) !important;
+}
+
+/*ESTILOS DEL PIE DE PÁGINA (FOOTER)*/
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /*Alineados por arriba*/
+    gap: var(--espacio-md);
+    background-color: var(--color-azul-noche);
+    color: var(--color-crema);
+    padding: var(--espacio-lg);
+    border-radius: 8px;
+}
+
+.site-footer a {
+    color: var(--color-verde-ruta);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }

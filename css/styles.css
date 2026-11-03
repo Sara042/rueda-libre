@@ -56,13 +56,13 @@ main {
 }
 
 .hero-portada {
-    background-color: var(--color-crema2);
-    min-height: 60vh;
-    display: grid;
+    text-align: center;
+    gap: var(--espacio-md);
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    background-color: var(--color-crema2);
     padding: var(--espacio-lg);
-    gap: var(--espacio-md)
+    min-height: 60vh;
 }
 .hero-contenido {
     text-align: left;
@@ -82,6 +82,7 @@ main {
     display:flex;
     gap: var(--espacio-md);
     flex-wrap: wrap; /*para que los enlaces pasen a otra linea si no caben*/
+    justify-content: center; 
 }
 /* Estilo base para los enlaces del menú */
 #menu a {
@@ -166,6 +167,7 @@ main {
     gap: var(--espacio-md);
     flex-wrap: wrap;
 }
+
 
 .tarjeta-servicio {
     background-color: #FFFFFF;
@@ -304,12 +306,23 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     border-color: var(--color-verde-ruta) !important;
 }
 
+@media (max-width: 767px) {
+    table {
+        font-size: 0.9rem;
+    }
+    th, td {
+       padding: 0.4rem 0.5rem;
+    }
+}
+
 /*ESTILOS DEL PIE DE PÁGINA (FOOTER)*/
 
 .site-footer {
     display: flex;
+    flex-direction:column;
     justify-content: space-between;
-    align-items: flex-start; /*Alineados por arriba*/
+    align-items: center; 
+    text-align: center;
     gap: var(--espacio-md);
     background-color: var(--color-azul-noche);
     color: var(--color-crema);
@@ -324,4 +337,72 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+/* ==========================================
+   7. MEDIA QUERIES PARA DISEÑO RESPONSIVO
+   ========================================== */
+
+   .hero-portada {  
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    gap: var(--espacio-md);
+}
+
+#menu {
+    justify-content: center;
+}
+
+.site-footer {
+    flex-direction: column;
+    aling-items: center;
+    text-align: center;
+}
+
+.contenedor-reservas-grid,
+.galeria-rutas {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-md);
+}
+
+/*tablet desde 768p en adelante*/
+@media (min-width: 768px) {
+    .hero-portada{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;   
+    }
+
+    #menu{
+        justify-content: flex-end;
+    }
+
+    .galeria-rutas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/*escritorio desde 1200px en adelante*/
+@media (min-width:1200px) {
+    .galeria-rutas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contenedor-reservas-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
